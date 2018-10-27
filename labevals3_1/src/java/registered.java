@@ -44,7 +44,7 @@ public class registered extends HttpServlet {
          String line=null;
          String fileName="C:\\S3 Buckets\\test2.txt";
         response.setContentType("text/html;charset=UTF-8");
-        creds = new BasicAWSCredentials("AKIAIVJP2XBT6WAKWECQ", "+3UjwsArSzHg7IBz8oadelfjkNoUdhACiTr+Qnk8");
+        creds = new BasicAWSCredentials("<your AWS access key id>", "<your AWS secret key id>");
       String foldername="customers.txt";
       AmazonS3 s3 = AmazonS3Client.builder().withRegion(Regions.US_EAST_1).withCredentials(new AWSStaticCredentialsProvider(creds)).build();
       S3Object s3object = s3.getObject(bucketName, foldername);
