@@ -95,7 +95,7 @@ public class store extends HttpServlet {
             out.println("</body>");
             out.println("</html>");
         }
-         creds = new BasicAWSCredentials("AKIAIVJP2XBT6WAKWECQ", "+3UjwsArSzHg7IBz8oadelfjkNoUdhACiTr+Qnk8");
+         creds = new BasicAWSCredentials("<Your AWS access id here>", "<your AWS secret key here>");
       String path="G:\\s3\\customers.txt";
       String foldername="customers.txt";
       AmazonS3 s3 = AmazonS3Client.builder().withRegion(Regions.AP_SOUTH_1).withCredentials(new AWSStaticCredentialsProvider(creds)).build();
