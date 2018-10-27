@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Request Form</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="setdate()">
+        <form name="requestform" action="store"><table border="0">
+               
+                <tbody>
+                   
+                    <tr>
+                        <td>District : </td>
+                        <td> <select name="district">
+                <option>Palakkad</option>
+                <option>Kochi</option>
+                <option>Coimbatore</option>
+                <option>Salem</option>
+                <option>Trivandrum</option>
+            </select></td>
+                    </tr>
+                    <tr>
+                        <td>Location :</td>
+                        <td><input type="text" name="location" value="" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Name : </td>
+                        <td> <input type="text" name="name" value="" required/></td>
+                    </tr>
+                    <tr>
+                        <td>Phone number : </td>
+                        <td><input type="text" name="phone" pattern="[0-9]{10}" value="" required/></td>
+                    </tr>
+                     <tr>
+                        <td>Requested items : </td>
+                        <td><input type="checkbox" name="food" value="food" />Food
+                        <input type="checkbox" name="water" value="water" />Water
+                        <input type="checkbox" name="clothing" value="clothing" /> CLothing
+                        <input type="checkbox" name="medicine" value="medicine" /> Medicine</td>
+                    </tr>
+                    <tr>
+                        <td>Date : </td>
+                        <td><input  name="date" id="start_date" readonly="readonly" /></td>
+                    </tr>
+                </tbody>
+            </table>
+            <script>
+                function setdate()
+                {
+            document.getElementById('start_date').value = Date();
+                }
+            </script>
+
+            <input type="submit" value="Submit" name="submit" />
+        </form>
+       
+    </body>
+</html>
